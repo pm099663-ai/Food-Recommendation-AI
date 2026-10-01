@@ -1,0 +1,6 @@
+{
+  "name": "Mise & Meal - AI Pantry Chef",
+  "description": "Smart culinary recommendation engine that transforms your available ingredients into chef-crafted recipes, zero-waste meal plans, and guided kitchen cooking.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
