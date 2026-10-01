@@ -1,4 +1,5 @@
-import express, { Request, Response } from "express";
+import express from "express";
+import type { Request, Response } from "express";
 import path from "path";
 import { fileURLToPath } from "url";
 import dotenv from "dotenv";
@@ -486,14 +487,14 @@ For each item identified:
 
 // Endpoint: Generate Multi-Day Zero-Waste Meal Plan
 app.post("/api/generate-meal-plan", async (req: Request, res: Response) => {
-  try {
-    const {
-      ingredients = [],
-      daysCount = 3,
-      dietary = "none",
-      servings = 2,
-    } = req.body;
+  const {
+    ingredients = [],
+    daysCount = 3,
+    dietary = "none",
+    servings = 2,
+  } = req.body;
 
+  try {
     const ingredientListText = ingredients
       .map((ing: any) =>
         typeof ing === "string"
